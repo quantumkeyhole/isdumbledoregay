@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>is Dumbledore gay?</title>
+<style>
+.centered {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 10em;
+  font-family: Arial, Helvetica, sans-serif;
+}
+</style>
+</head>
+
+<body>
+
+  <div id="inline" class="centered">
+    <div style="padding:20px; display: none;" id="nodiv">
+        YES
+    </div>
+    <div style="padding:20px; display: none;" id="yesdiv">
+        NO
+    </div>
+  </div>
+
+  <script>
+
+  function getRndInteger(min, max) {
+    return Math.floor(Math.random() * (max - min + 1) ) + min;
+  }
+
+  var divshownnum = getRndInteger(0, 1) == 0 ? 'nodiv' : 'yesdiv';
+  var divshown = document.getElementById(divshownnum);
+
+  divshown.style.display = "block";
+
+  </script>
+
+</body>
+
+</html>
